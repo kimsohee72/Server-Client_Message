@@ -42,7 +42,6 @@ int main(int argc, char const *argv[])
         memset(c->pw, '\0', MAX_SIZE + 1);
 
         SC2 *sc2 = (SC2 *)malloc(sizeof(SC2));
-        sc2->page = 3;
         memset(sc2->problem, '\0', MAX_SIZE + 1);
         memset(sc2->check, '\0', MAX_SIZE + 1);
         memset(sc2->id, '\0', MAX_SIZE + 1);
@@ -65,11 +64,14 @@ int main(int argc, char const *argv[])
                 int fd = open(file.c_str(), O_RDONLY, 0755);
                 if (fd != -1)
                 {
-                    printf("denied   %s\n", "ID Alread exsisted");
+                    
+
                     strcpy(sc2->check, "ID Alread exsisted");
                     sc2->page = 1;
                     write(fd_sc2, (SC2 *)sc2, sizeof(SC2));
-                    free(sc2);
+                    printf("denied   %s\n", "ID Alread exsisted");
+                    
+
                 }
                 else
                 {
@@ -110,8 +112,8 @@ int main(int argc, char const *argv[])
                         write(fd_sc2,(SC2*)sc2,sizeof(SC2));
                     }else{
                         sc2->page=0;
-                        strcpy(sc2->id,c->id);
-                        strcpy(sc2->name,c->name);
+                        strcpy(sc2->id,"dd");
+                        strcpy(sc2->name,"dd");
                         write(fd_sc2,(SC2*)sc2,sizeof(SC2));
                         printf("success\n");
                     }

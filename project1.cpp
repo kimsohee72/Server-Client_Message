@@ -534,7 +534,7 @@ void signupPage(int x, int y, int z, int k, char key, WINDOW *win1,
                         
 
                         SC2 *sc2 = (SC2 *)malloc(sizeof(SC2));
-                        sc2->page=0;
+                        sc2->page=100;
                         memset(sc2->check, '\0', MAX_SIZE + 1);
                         memset(sc2->id, '\0', MAX_SIZE + 1);
                         memset(sc2->name, '\0', MAX_SIZE + 1);

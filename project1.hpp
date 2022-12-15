@@ -29,8 +29,6 @@ struct Mem {
     char name[MAX_SIZE + 1];
     char id[MAX_SIZE + 1];
     char pw[MAX_SIZE + 1];
-    int count;
-    char arr[MAX_SIZE][MAX_SIZE + 1];
 };
 
 struct CS2 {

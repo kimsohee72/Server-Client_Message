@@ -24,8 +24,8 @@ int main(int argc, char const *argv[])
     mkdir("./tmp/2020203031",0777);
 
     // fifo 파일을 생성한다.
-//    mkfifo("/tmp/2020203031/SC2", 0666);
-//     mkfifo("/tmp/2020203031/CS2", 0666);
+   mkfifo("./tmp/2020203031/SC2", 0666);
+    mkfifo("./tmp/2020203031/CS2", 0666);
 
     // fifo 파일을 생성한다.
 
